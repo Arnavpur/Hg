@@ -1,24 +1,23 @@
-$black: #414141;
-$red: #ff0000;
-$dur: 6s;
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 html,
 body {
-  font-family: "Caveat";
+  font-family: "Caveat", cursive;
   font-weight: 700;
   background: #88cbf2;
 }
+
 h1 {
   font-size: 4em;
-  margin: 0.25em auto 0.25em;
+  margin: 0.25em auto;
 }
+
 h2 {
   font-size: 3em;
   margin: 0;
   line-height: 1;
 }
+
 h1,
 h2 {
   text-align: center;
@@ -28,6 +27,7 @@ div {
   align-items: center;
   box-sizing: border-box;
 }
+
 .main {
   top: 50%;
   left: 50%;
@@ -37,23 +37,23 @@ div {
   flex-direction: column;
   width: 600px;
   height: 400px;
-  border: 1px solid $black;
+  border: 1px solid #414141;
   background-color: white;
   overflow: hidden;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 550px;
-    height: 550px;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 100%;
-    z-index: -1;
-    visibility: hidden;
-  }
+.main::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 550px;
+  height: 550px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 100%;
+  z-index: -1;
+  visibility: hidden;
 }
 
 .ghosty {
@@ -62,418 +62,51 @@ div {
   top: 129px;
   width: 177px;
   height: 182px;
-  
-  .head {
-    position: absolute;
-    top: 3px;
-    left: 15px;
-    width: 153px;
-    height: 170px;
-    border-radius: 100%;
-    border: 5px solid $black;
-    transform: skewY(5deg);
-  }
-
-  .curvy {
-    position: absolute;
-    overflow: hidden;
-    > div {
-      position: absolute;
-      border-radius: 100%;
-      border: 5px solid $black;
-    }
-  }
-
-  .curvya {
-    height: 12px;
-    left: 0px;
-    top: 143px;
-    width: 170px;
-
-    .feet1 {
-      left: 5px;
-      top: -36px;
-      width: 44px;
-      height: 44px;
-    }
-    .feet2 {
-      left: 57px;
-      top: -33px;
-      width: 44px;
-      height: 44px;
-    }
-    .feet3 {
-      left: 115px;
-      top: -32px;
-      width: 42px;
-      height: 42px;
-    }
-  }
-  .curvyb {
-    height: 12px;
-    left: 0px;
-    top: 135px;
-    width: 170px;
-
-    .feet1 {
-      left: 33px;
-      top: 0px;
-      width: 37px;
-      height: 44px;
-    }
-    .feet2 {
-      left: 87px;
-      top: 0;
-      width: 42px;
-      height: 44px;
-    }
-  }
-  .curvyc {
-    height: 32px;
-    left: 0px;
-    top: 112px;
-    width: 20px;
-
-    .feet1 {
-      left: 4px;
-      top: -14px;
-      width: 59px;
-      height: 55px;
-    }
-  }
-  .curvyd {
-    height: 32px;
-    left: 0px;
-    top: 80px;
-    width: 20px;
-
-    .feet1 {
-      left: -69px;
-      top: -49px;
-      width: 87px;
-      height: 110px;
-    }
-  }
-  .curvye {
-    left: 148px;
-    top: 107px;
-    height: 50px;
-    width: 24px;
-
-    .feet1 {
-      left: -69px;
-      top: -48px;
-      width: 87px;
-      height: 100px;
-    }
-  }
-  .curvyf {
-    left: 10px;
-    top: 2px;
-    height: 83px;
-    width: 84px;
-
-    .feet1 {
-      left: 3px;
-      top: 1px;
-      width: 147px;
-      height: 160px;
-      transform: skewY(3deg);
-    }
-  }
-  .curvyg {
-    left: 88px;
-    top: 2px;
-    height: 109px;
-    width: 84px;
-
-    .feet1 {
-      left: -79px;
-      top: 1px;
-      width: 157px;
-      height: 200px;
-    }
-  }
-  .eye1,
-  .eye2 {
-    left: 40px;
-    top: 45px;
-    height: 13px;
-    width: 20px;
-    // transform: rotate(34deg);
-
-    .feet1 {
-      left: 0px;
-      top: -16px;
-      width: 15px;
-      height: 25px;
-      transform: skewY(12deg);
-    }
-  }
-  .eye2 {
-    left: 82px;
-    top: 45px; 
-  }
-
-  .hand {
-    border-left: none;
-    border-top-left-radius: 30px 18px;
-    border-bottom-left-radius: 30px 18px;
-    position: absolute;
-    left: 46px;
-    top: 63px;
-    width: 30px;
-    height: 38px;
-    border: 5px solid #414141;
-    background-color: white;
-    border-right: none;
-    transform-origin: center right;
-    transform: scaleX(-1.2) skewY(-10deg) rotate(-5deg);
-  }
-
 }
 
-.ghosty2 {
-  left: 487px;
-  top: 107px;
-
-  .curvya {
-    left: 20px;
-    top: 150px;
-    transform: rotate(-9deg);
-    .feet2 {
-      left: 60px;
-      width: 41px;
-    }
-    .feet3 {
-      left: 118px;
-      top: -33px;
-      width: 37px;
-    }
-  }
-  .curvyb {
-    left: 20px;
-    top: 140px;
-    transform: rotate(-9deg);
-  }
-  .curvyc {
-    display: none;
-  }
-  .curvyd {
-    height: 81px;
-    left: 5px;
-    top: 82px;
-    width: 40px;
-    transform: rotate(-4deg);
-  .feet1 {
-    left: 2px;
-    top: -61px;
-    width: 97px;
-    height: 155px;
-   }
-  }
-  .curvye {
-    left: 159px;
-    height: 34px;
-    transform: rotate(1deg);
-    .feet1 {
-      left: -74px;
-      top: -44px;
-      height: 112px;
-      width: 88px;
-    }
-  }
-  .curvyf {
-    left: 4px;
-    .feet1 {
-      left: 1px;
-      transform: skewY(0deg);
-    }
-  }
-  .curvyg {
-    .feet1 {
-
-      left: -70px;
-      height: 250px;
-      transform: rotate(-9deg);
-    }
-  }
-  .eye1,
-  .eye2 {
-    left: 26px;
-    top: 50px;
-    transform: rotate(0deg);
-    .feet1 {
-      left: 0px;
-      top: 0px;
-      width: 5px;
-      height: 5px;
-      transform: scaleX(0.6) skewX(10deg);
-    }
-  }
-  .eye2 {
-    left: 67px;
-    top: 44px; 
-  }
-
-}
-
-.ghosty4 {
-  .feet1 {
-    background-color: white;
-    border: none;
-  }
-  .curvye {
-    left: 128px;
-    height: 38px;
-    width: 124px;
-    .feet1 {
-      left: -49px;
-    }
-  }
-  .curvyf {
-    left: 88px;
-    top: 53px;
-    width: 50px;
-    height: 92px;
-    .feet1 {
-
-      left: 0;
-      top: 1px;
-      width: 147px;
-      height: 95px;
-      transform: initial;
-      border: none;
-    }
-  }
-}
-
-.heart {
-  font-size: 60px;
+.ghosty .head {
   position: absolute;
-  left: 240px;
-  top: 60px;
-  span {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-.msg {
-  position: absolute;
-  left: 0;
-  top: 290px;
-  text-align: center;
-  white-space: pre-line;
-  font-size: 3em;
-  width: 100%;
-  line-height: 1;
-  animation: 6s msgshow linear infinite;
-  z-index: 7;
-}
-@keyframes msgshow {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-.shadows {
-  position: absolute;
-  left: 187px;
-  top: 129px;
-}
-.shadow1,
-.shadow2 {
-  position: absolute;
-  left: 8px;
-  top: 152px;
-  width: 150px;
-  height: 30px;
-  background-color: #d7d7d7;
+  top: 3px;
+  left: 15px;
+  width: 153px;
+  height: 170px;
   border-radius: 100%;
-}
-.shadow2 {
-  left: 322px;
-  animation: $dur shadowff linear infinite;
-}
-@keyframes shadowff {
-  0% {
-    transform: initial;
-  }
-  10% {
-    transform: translateX(-42px);
-  }
-  20% {
-    transform: translateX(-84px);
-  }
-  30% {
-    transform: translateX(-126px);
-  }
-  40% {
-    transform: translateX(-168px);
-  }
-  50% {
-    transform: translateX(-210px);
-  }
-  100% {
-    transform: translateX(-210px);
-  }
+  border: 5px solid #414141;
+  transform: skewY(5deg);
 }
 
-
-.ghosty1 {
-  z-index: 3;
-}
-.ghosty2 {
-  z-index: 1;
-}
-.ghosty3 {
-  z-index: 4;
-}
-.ghosty4 {
-  z-index: 2;
-}
-.shadows {
-  z-index: 1;
-}
-
-.ghosty .blush1,
-.ghosty .blush2 {
+/* Eyes */
+.ghosty .eye1,
+.ghosty .eye2 {
   position: absolute;
-  left: 25px;
-  top: 60px;
-  width: 14px;
-  height: 14px;
-  background: radial-gradient(circle, rgba(237,193,198,1) 10%, rgba(255,255,255,1) 90%);
-  border-radius: 100%;
-}
-.ghosty .blush2 {
-  left: 105px;
-  top: 54px;
+  left: 40px;
+  top: 45px;
+  height: 13px;
+  width: 20px;
 }
 
-.ghosty2 .blush1 {
-  left: 13px;
-  top: 64px;
-  display: none;
-}
-.ghosty2 .blush2 {
-  left: 89px;
-  top: 50px;
+.ghosty .eye2 {
+  left: 82px;
 }
 
-.ghosty2 {
-  animation: $dur float linear infinite;
+/* Hand */
+.ghosty .hand {
+  border-left: none;
+  border-top-left-radius: 30px 18px;
+  border-bottom-left-radius: 30px 18px;
+  position: absolute;
+  left: 46px;
+  top: 63px;
+  width: 30px;
+  height: 38px;
+  border: 5px solid #414141;
+  background-color: white;
+  border-right: none;
+  transform-origin: center right;
+  transform: scaleX(-1.2) skewY(-10deg) rotate(-5deg);
 }
 
+/* Animation */
 @keyframes float {
   0% {
     transform: initial;
@@ -497,183 +130,140 @@ div {
     transform: translate(-210px, -2px);
   }
 }
+
+.ghosty2 {
+  left: 487px;
+  top: 107px;
+  animation: 6s float linear infinite;
+}
+
 .ghosty2 .hand {
-  animation: $dur hugging linear infinite;
+  animation: 6s hugging linear infinite;
 }
+
 @keyframes hugging {
-  0% {
+  0%, 50% {
     transform: scaleX(-1.2) skewY(-10deg) rotate(-5deg);
   }
-  50% {
-    transform: scaleX(-1.2) skewY(-10deg) rotate(-5deg);
-  }
-  55% {
-    transform: scaleX(1.2) skewY(-10deg) rotate(-15deg);
-  }
-  100% {
+  55%, 100% {
     transform: scaleX(1.2) skewY(-10deg) rotate(-15deg);
   }
 }
-.ghosty1 .eye1 .feet1,
-.ghosty1 .eye2 .feet1 {
-  animation: $dur smize linear infinite;
-}
+
 @keyframes smize {
-  0% {
-    left: 0px;
-    top: -16px;
+  0%, 52% {
     width: 17px;
     height: 25px;
     transform: skewY(12deg);
   }
-  52% {
-    left: 0px;
-    top: -16px;
-    width: 17px;
-    height: 25px;
-    transform: skewY(12deg);
-  }
-  55% {
-    left: 0px;
-    top: 0px;
+  55%, 70% {
     width: 5px;
     height: 5px;
     transform: scaleX(0.6);
   }
-  70% {
-    left: 0px;
-    top: 0px;
-    width: 5px;
-    height: 5px;
-    transform: scaleX(0.6);
-  }
-  71% {
-    left: 0px;
-    top: 0px;
-    width: 19px;
-    height: 22px;
-    transform: initial;
-  }
-  100% {
-    left: 0px;
-    top: 0px;
+  71%, 100% {
     width: 19px;
     height: 22px;
     transform: initial;
   }
 }
 
-.ghosty2 .eye1 .feet1,
-.ghosty2 .eye2 .feet1 {
-  animation: $dur smize2 linear infinite;
+.ghosty1 .eye1 .feet1,
+.ghosty1 .eye2 .feet1 {
+  animation: 6s smize linear infinite;
 }
-@keyframes smize2 {
-  0% {
-    left: 0px;
-    top: 0px;
-    width: 5px;
-    height: 5px;
-    transform: scaleX(0.6) skewX(10deg);
+
+/* Blush Effect */
+@keyframes blush {
+  0%, 72% {
+    opacity: 0;
   }
-  70% {
-    left: 0px;
-    top: 0px;
-    width: 5px;
-    height: 5px;
-    transform: scaleX(0.6) skewX(10deg);
-  }
-  71% {
-    left: 0px;
-    top: 0px;
-    width: 19px;
-    height: 22px;
-    transform: initial;
+  77%, 99% {
+    opacity: 1;
   }
   100% {
-    left: 0px;
-    top: 0px;
-    width: 19px;
-    height: 22px;
-    transform: initial;
+    opacity: 0;
   }
 }
 
 .ghosty .blush1,
 .ghosty .blush2 {
-  animation: $dur blush linear infinite;
+  position: absolute;
+  left: 25px;
+  top: 60px;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, rgba(237,193,198,1) 10%, rgba(255,255,255,1) 90%);
+  border-radius: 100%;
+  animation: 6s blush linear infinite;
 }
-@keyframes blush {
-  0% {
+
+.ghosty .blush2 {
+  left: 105px;
+  top: 54px;
+}
+
+/* Heart Animation */
+@keyframes heartbroke {
+  0%, 66% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  70%, 74%, 77% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  80%, 100% {
     opacity: 0;
   }
-  72% {
+}
+
+@keyframes heartfull {
+  0%, 70% {
     opacity: 0;
   }
-  77% {
+  74%, 77% {
+    opacity: 0;
+  }
+  80%, 100% {
     opacity: 1;
   }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+}
+
+.heart {
+  font-size: 60px;
+  position: absolute;
+  left: 240px;
+  top: 60px;
 }
 
 .heart .broke {
-  animation: $dur heartbroke linear infinite;
-}
-@keyframes heartbroke {
-  0% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  66% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-  74% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  77% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-  80% {
-    opacity: 0;
-    transform: translateY(0px);
-  }
-  100% {
-    opacity: 0;
-  }
+  animation: 6s heartbroke linear infinite;
 }
 
 .heart .full {
-  animation: $dur heartfull linear infinite;
+  animation: 6s heartfull linear infinite;
 }
-@keyframes heartfull {
+
+/* Message Animation */
+@keyframes msgshow {
   0% {
     opacity: 0;
   }
-  70% {
-    opacity: 0;
-  }
-  74% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
+  50%, 100% {
     opacity: 1;
   }
 }
 
+.msg {
+  position: absolute;
+  left: 0;
+  top: 290px;
+  text-align: center;
+  white-space: pre-line;
+  font-size: 3em;
+  width: 100%;
+  line-height: 1;
+  animation: 6s msgshow linear infinite;
+  z-index: 7;
+}
