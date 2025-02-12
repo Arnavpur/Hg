@@ -3,34 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <title>Happy Hug Day</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="end-message d-none">
-        <p>
-            Hooray! There's no more sad bunnies!
-        </p>
-        <button>Play Again</button>
+<div class="container w-100 h-100 d-flex align-items-center justify-content-center">
+
+    <div class="card my-auto py-5 text-center shadow mx-auto w-50 d-flex bg-white position-absolute">
+
+        <span><i class="mb-3 d-block">|| Om Sai Ram ||</i></span>
+
+        <h3 class="card-title">Hello My <i class="fa fa-heart text-danger"></i></h3>
+
+        <h1 class="my-auto text-center text-danger">
+            <i class="fa fa-hands-clapping text-danger"></i> Happy Hug Day
+        </h1>
+
+        <br>
+        <center>
+            <img src="https://media1.tenor.com/images/e3a906a565a5ed8c11b4d940c10ca06f/tenor.gif?itemid=12129586" 
+                 class="svg" width="200">
+        </center>
+
     </div>
-    <div class="bunny-radar">
-        <div class="circle"></div>
-    </div>
-    <div class="map-cover overflow-hidden">
-        <div class="map">
-            <div class="player-wrapper flex-center">
-                <div class="player sprite-container">
-                    <div class="bear sprite"></div>
-                </div>
-            </div>
-        </div>
-    </div>  
+
 </div>
 
-<div class="indicator">x 45</div>
+<!-- Bootstrap JS (Optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Custom JavaScript -->
 <script src="script.js"></script>
 
 </body>
